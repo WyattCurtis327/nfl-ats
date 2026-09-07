@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nfl-predictions"
+version = "0.1.0"
+description = "Portable NFL against-the-spread week card (Tuesday card, Friday refresh, grade)."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+authors = [{ name = "nfl-ats" }]
+keywords = ["nfl", "ats", "spreads", "nflverse", "nfelo"]
+dependencies = [
+  "pandas>=2.1",
+  "numpy>=1.26",
+  "requests>=2.31",
+  "pyarrow>=14",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+nfl-ats = "nfl_predictions.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/WyattCurtis327/nfl_predictions"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,39 @@
+{
+  "ratings": [
+    {"team": "KC", "nfelo": 1600, "qb_adj": 12, "value": 4.0},
+    {"team": "BAL", "nfelo": 1550, "qb_adj": -8, "value": 2.0},
+    {"team": "SF", "nfelo": 1580, "qb_adj": 5, "value": 3.2},
+    {"team": "LAR", "nfelo": 1525, "qb_adj": -3, "value": 1.0},
+    {"team": "BUF", "nfelo": 1570, "qb_adj": 20, "value": 2.8},
+    {"team": "MIA", "nfelo": 1480, "qb_adj": -60, "value": -0.8}
+  ],
+  "games": [
+    {
+      "season": 2025,
+      "week": 1,
+      "home": "KC",
+      "away": "BAL",
+      "nfelo_home_margin": 4.5,
+      "home_qb_adj": 12,
+      "away_qb_adj": -8
+    },
+    {
+      "season": 2025,
+      "week": 1,
+      "home": "SF",
+      "away": "LAR",
+      "nfelo_home_margin": 5.0,
+      "home_qb_adj": 5,
+      "away_qb_adj": -3
+    },
+    {
+      "season": 2025,
+      "week": 1,
+      "home": "BUF",
+      "away": "MIA",
+      "nfelo_home_margin": 6.0,
+      "home_qb_adj": 20,
+      "away_qb_adj": -60
+    }
+  ]
+}
