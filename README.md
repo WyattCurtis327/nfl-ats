@@ -32,6 +32,23 @@ pytest
 
 `--season` / `--week` default to the current NFL season and the next unplayed REG week from the nflverse schedule.
 
+
+## nflverse cache (box / weekly jobs)
+
+Parquets are **not** in git (see `.gitignore` → `.cache/`). Prefetch locally:
+
+```bash
+make fetch-nflverse
+# or: ./scripts/fetch_nflverse.sh
+```
+
+Default path (repo root cwd): `./.cache/nflverse/`  
+On the Bot VM / Analytics weekly path: `/workspace/nfl-ats/.cache/nflverse/`
+
+Downloads `games.parquet` plus `play_by_play_{1999..2025}.parquet` from [nflverse-data releases](https://github.com/nflverse/nflverse-data/releases). Override with `NFLVERSE_START_SEASON` / `NFLVERSE_END_SEASON` / `NFLVERSE_CACHE` / `FORCE=1`.
+
+CLI auto-downloads missing seasons into `--cache-dir` (default `.cache/nflverse`) when you run `nfl-ats card|refresh|grade`.
+
 ## Environment
 
 | Variable | Required | Purpose |

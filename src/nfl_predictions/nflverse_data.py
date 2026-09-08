@@ -24,7 +24,7 @@ GAMES_URL = (
 )
 
 DEFAULT_CACHE = Path(".cache") / "nflverse"
-_USER_AGENT = "nfl-ats/0.1 (+https://github.com/WyattCurtis327/nfl_predictions)"
+_USER_AGENT = "nfl-ats/0.1 (+https://github.com/WyattCurtis327/nfl-ats)"
 
 # PBP columns used by EPA windows (keeps tests / memory light if callers subset).
 PBP_COLUMNS = [
